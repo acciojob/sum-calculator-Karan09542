@@ -10,7 +10,7 @@ useEffect(()=>{
   return (
     <div>
         <input type="number" value={value} onChange={(e) => setValue(prev => prev + Number(e.target.value))} />
-        <p>Sum: {sum}</p>
+        <h1>Sum: {sum}</h1>
     </div>
   )
 }
