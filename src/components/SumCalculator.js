@@ -13,7 +13,7 @@ useEffect(()=>{
   return (
     <div>
         <input type="number" value={value[0]} onChange={onChange} />
-        <h1>Sum: {sum}</h1>
+        <h1>Sum: {value[1]}</h1>
     </div>
   )
 }
