@@ -9,7 +9,7 @@ function onChange(e){
 }
 useEffect(()=>{
     setValue(prev => [prev[0], prev[1] + prev[0]])
-},[value])
+},[value[0]])
   return (
     <div>
         <input type="number" value={value[0]} onChange={onChange} />
