@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react'
 
 const SumCalculator = () => {
-const [value, setValue] = useState(0);
-const [sum, setSum] = useState(0);
+const [value, setValue] = useState([0,0]);
 
+function onChange(e){
+  const value = parseInt(e.target.value);
+  setValue(prev => [value, prev[1]])
+}
 useEffect(()=>{
-    setSum(prev => prev + value)
+    setValue(prev => [prev[0], prev[1] + prev[0]])
 },[value])
   return (
     <div>
-        <input type="number" value={value} onChange={(e) => setValue(prev => prev + Number(e.target.value))} />
+        <input type="number" value={value[0]} onChange={onChange} />
         <h1>Sum: {sum}</h1>
     </div>
   )
