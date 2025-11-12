@@ -12,8 +12,9 @@ useEffect(()=>{
 },[value[0]])
   return (
     <div>
+      <h1>Sum Calculator</h1>
         <input type="number" value={value[0]} onChange={onChange} />
-        <h1>Sum: {value[1]}</h1>
+        <p>Sum: {value[1]}</p>
     </div>
   )
 }
